@@ -12,5 +12,6 @@ scrapper = Scraper(black_mirror)
 scrapper.scrap_all_episodes()
 scrapper.save_episodes_as_csv(data_path)
 
+# scrap reviews
 scrapper.scrap_all_reviews()
 scrapper.save_reviews_as_csv(review_path)
