@@ -8,7 +8,6 @@ from review import Review
 
 class Scraper:
     episodes_page = ''
-
     episodes = []
     reviews = []
 
@@ -33,7 +32,7 @@ class Scraper:
             html_page = requests.get(self.episodes_page + str(season_counter)).text  # get html page from url
             html_page_soup = BeautifulSoup(html_page, 'html.parser')  # create BeautifulSoup object
 
-            # extract array episodes_soup, every episode being in a div with attribute itemprop="episodes"
+            # extract every episode being in a div with attribute itemprop="episodes"
             episodes_soup = html_page_soup.find_all('div', itemprop="episodes")
 
             for episode_soup in episodes_soup:  # extract details of every episode
@@ -89,7 +88,6 @@ class Scraper:
 
             print(path, 'read')
             return self.episodes
-
     # endregion
 
     # region reviews
