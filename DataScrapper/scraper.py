@@ -101,9 +101,8 @@ class Scraper:
             reviews = self.scrap_episode_reviews(episode)  # scrap reviews of the episode
             self.reviews = self.reviews + reviews
             print('\t', episode.episode_title, ': reviews scraped')
-
-            # if len(self.reviews) > 200:  # only scrap the first 200 reviews
-            #    break
+            if len(self.reviews) > 200:  # only scrap the first 200 reviews
+                break
 
         return self.reviews
 
