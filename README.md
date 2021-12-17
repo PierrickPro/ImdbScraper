@@ -1,4 +1,4 @@
-# soen387_scraper
+# IMDB Scrapper
 
 ## Run Program
 > python main.py
